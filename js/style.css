@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
+article{
+width: 40px;
+height: 300px;
+}
+header{
+    width: 100%;
+    margin: 25%;
+    text-align: center;
+}
