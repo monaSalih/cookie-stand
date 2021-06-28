@@ -31,28 +31,25 @@ let Seattle = {
     console.log(this.cookiesNum);
     console.log(this.totalCoun);
 
+  },
+  render:function(){
+    let coDiv=document.getElementById('cookLis');
+    let ulCo=document.createElement('ul');
+    let liCo=document.createElement('li');
+    for (let i = 0; i < this.cookiesNum.length; i++) {
+      liCo.textContent=`${time[i]}:${this.cookiesNum}cookies`;
+      ulCo.appendChild(liCo);
+
+
+    }
+    liCo.textContent=this.totalCoun;
+    ulCo.appendChild(liCo);
+    coDiv.appendChild(ulCo);
   }
-//   ,
-//   render:function(){
-//     let divCook=document.getElementById('cookLis');
-//     let artic= document.createElement('article');
-//     divCook.appendChild(artic);
 
-//     let h2El=document.createElement('h2');
-//     artic.appendChild(h2El);
-//     h2El.textContent='seattle';
-
-//     let ulEl=document.createElement('ul');
-//     for(let e=0;e<=time.length;e++)
-//     {let liEl=document.createElement('li');
-//       ul.appendChild(li);
-//       let newLi=time[e]+':'+this.cookiesNum[e];
-//     }
-//     let h3El=document.createElement('h3');
-//     h3El.textContent=`total cookies${this.totalCoun} our shop sold `;
-//   }
 
 };
+Seattle.render();
 Seattle.customerPerHour();
 Seattle.cookiesAvr();
 // Seattle.render();
@@ -89,25 +86,25 @@ let Tokyo = {
     console.log(this.totalCoun);
 
   }
-//   ,
-//   render:function(){
-//     let divCook=document.getElementById('cookLis');
-//     let artic= document.createElement('article');
-//     divCook.appendChild(artic);
+  //   ,
+  //   render:function(){
+  //     let divCook=document.getElementById('cookLis');
+  //     let artic= document.createElement('article');
+  //     divCook.appendChild(artic);
 
-//     let h2El=document.createElement('h2');
-//     artic.appendChild(h2El);
-//     h2El.textContent='seattle';
+  //     let h2El=document.createElement('h2');
+  //     artic.appendChild(h2El);
+  //     h2El.textContent='seattle';
 
-//     let ulEl=document.createElement('ul');
-//     for(let e=0;e<=this.time.length;e++)
-//     {let liEl=document.createElement('li');
-//       ul.appendChild(li);
-//       let newLi=time[e]+':'+this.cookiesNum[e];
-//     }
-//     let h3El=document.createElement('h3');
-//     h3El.textContent=`total cookies${this.totalCoun} our shop sold `;
-//   }
+  //     let ulEl=document.createElement('ul');
+  //     for(let e=0;e<=this.time.length;e++)
+  //     {let liEl=document.createElement('li');
+  //       ul.appendChild(li);
+  //       let newLi=time[e]+':'+this.cookiesNum[e];
+  //     }
+  //     let h3El=document.createElement('h3');
+  //     h3El.textContent=`total cookies${this.totalCoun} our shop sold `;
+  //   }
 
 };
 Tokyo.customerPerHour();
@@ -144,25 +141,25 @@ let Dubai = {
     console.log(this.totalCoun);
 
   }
-//   ,
-//   render:function(){
-//     let divCook=document.getElementById('cookLis');
-//     let artic= document.createElement('article');
-//     divCook.appendChild(artic);
+  //   ,
+  //   render:function(){
+  //     let divCook=document.getElementById('cookLis');
+  //     let artic= document.createElement('article');
+  //     divCook.appendChild(artic);
 
-//     let h2El=document.createElement('h2');
-//     artic.appendChild(h2El);
-//     h2El.textContent='seattle';
+  //     let h2El=document.createElement('h2');
+  //     artic.appendChild(h2El);
+  //     h2El.textContent='seattle';
 
-//     let ulEl=document.createElement('ul');
-//     for(let e=0;e<=this.time.length;e++)
-//     {let liEl=document.createElement('li');
-//       ul.appendChild(li);
-//       let newLi=time[e]+':'+this.cookiesNum[e];
-//     }
-//     let h3El=document.createElement('h3');
-//     h3El.textContent=`total cookies${this.totalCoun} our shop sold `;
-//   }
+  //     let ulEl=document.createElement('ul');
+  //     for(let e=0;e<=this.time.length;e++)
+  //     {let liEl=document.createElement('li');
+  //       ul.appendChild(li);
+  //       let newLi=time[e]+':'+this.cookiesNum[e];
+  //     }
+  //     let h3El=document.createElement('h3');
+  //     h3El.textContent=`total cookies${this.totalCoun} our shop sold `;
+  //   }
 
 };
 Dubai.customerPerHour();
@@ -198,25 +195,25 @@ let Paris = {
     console.log(this.totalCoun);
 
   }
-//   ,
-//   render:function(){
-//     let divCook=document.getElementById('cookLis');
-//     let artic= document.createElement('article');
-//     divCook.appendChild(artic);
+  //   ,
+  //   render:function(){
+  //     let divCook=document.getElementById('cookLis');
+  //     let artic= document.createElement('article');
+  //     divCook.appendChild(artic);
 
-//     let h2El=document.createElement('h2');
-//     artic.appendChild(h2El);
-//     h2El.textContent='seattle';
+  //     let h2El=document.createElement('h2');
+  //     artic.appendChild(h2El);
+  //     h2El.textContent='seattle';
 
-//     let ulEl=document.createElement('ul');
-//     for(let e=0;e<=this.time.length;e++)
-//     {let liEl=document.createElement('li');
-//       ul.appendChild(li);
-//       let newLi=time[e]+':'+this.cookiesNum[e];
-//     }
-//     let h3El=document.createElement('h3');
-//     h3El.textContent=`total cookies${this.totalCoun} our shop sold `;
-//   }
+  //     let ulEl=document.createElement('ul');
+  //     for(let e=0;e<=this.time.length;e++)
+  //     {let liEl=document.createElement('li');
+  //       ul.appendChild(li);
+  //       let newLi=time[e]+':'+this.cookiesNum[e];
+  //     }
+  //     let h3El=document.createElement('h3');
+  //     h3El.textContent=`total cookies${this.totalCoun} our shop sold `;
+  //   }
 
 };
 Paris.customerPerHour();
@@ -253,6 +250,36 @@ let lima = {
     console.log(this.totalCoun);
 
   }
+  ,
+  Show : function(){
+    this.calDailyTotle();
+    let headLi = document.getElementById('list1');
+    headLi.textContent = this.storeLoc ;
+
+    let divEl = document.getElementById('Seattle');
+    let ulEl = document.createElement('ul');
+
+    for(let i= 0;i<this.hourlySales.length;i++){
+      let liEL = document.createElement('li');
+      liEL.textContent = this.hour[i] + ': ' + this.hourlySales[i] + ' cookies';
+      ulEl.appendChild(liEL);
+    }
+    let liEL = document.createElement('li');
+    liEL.textContent = 'Total: ' + this.dailyTotle +' cookies';
+    ulEl.appendChild(liEL);
+    divEl.appendChild(ulEl);
+
+  }
+
+};
+lima.customerPerHour();
+lima.cookiesAvr();
+// lima.render();
+lima.totalCoun;
+
+
+
+
 //   ,
 //   render:function(){
 //     let divCook=document.getElementById('cookLis');
@@ -264,7 +291,7 @@ let lima = {
 //     h2El.textContent='seattle';
 
 //     let ulEl=document.createElement('ul');
-//     for(let e=0;e<=this.time.length;e++)
+//     for(let e=0;e<=time.length;e++)
 //     {let liEl=document.createElement('li');
 //       ul.appendChild(li);
 //       let newLi=time[e]+':'+this.cookiesNum[e];
@@ -272,9 +299,3 @@ let lima = {
 //     let h3El=document.createElement('h3');
 //     h3El.textContent=`total cookies${this.totalCoun} our shop sold `;
 //   }
-
-};
-lima.customerPerHour();
-lima.cookiesAvr();
-// lima.render();
-lima.totalCoun;
