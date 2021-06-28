@@ -1,6 +1,10 @@
 *{
     box-sizing: border-box;
 }
+footer{
+background-color: #9F5F80;
+text-align: center;
+}
 
 article{
 width: 40px;
