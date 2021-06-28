@@ -14,3 +14,16 @@ img{
     width: 300px;
     height: 100px
 }
+
+table, th {
+    border: 1px solid black;
+  }
+div li{
+    text-align: center;
+}
+ td{
+border:1px solid #5C8D89;
+}
+
+
+tr:hover {background-color:#B3E283;}
