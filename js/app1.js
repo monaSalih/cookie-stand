@@ -121,30 +121,30 @@ NewCons.prototype.render=function(){
   dataRow.appendChild(tdtotal) ;
   tdtotal.textContent=this.totalCoun;
 
-  function FooterCalc(){
-    let lastRo=document.createElement('tfoot');
-    let tdFoot=document.createElement('td');
-    tdFoot.textContent='Totals';
-    lastRo.appendChild(tdFoot);
-    tabCo.appendChild(tdFoot);
-    let dailyTotal=0;
-    for (let u = 0; u < time.length; u++) {
-      let tdFooter=document.createElement('td');
-      let sum=0;
-      for(let s=0; s<shop.length;s++)
-      {sum=sum+shop[s].customeEachHour[u];
-      }
-      dailyTotal=dailyTotal+sum;
-      tdFooter.textContent=sum;
-      lastRo.appendChild(tdFooter);
-    }
-    let ceilTotal=document.createElement('td');
-    ceilTotal.textContent=dailyTotal;
+  // function FooterCalc(){
+  //   let lastRo=document.createElement('tfoot');
+  //   let tdFoot=document.createElement('td');
+  //   tdFoot.textContent='Totals';
+  //   lastRo.appendChild(tdFoot);
+  //   tabCo.appendChild(tdFoot);
+  //   let dailyTotal=0;
+  //   for (let u = 0; u < time.length; u++) {
+  //     let tdFooter=document.createElement('td');
+  //     let sum=0;
+  //     for(let s=0; s<shop.length;s++)
+  //     {sum=sum+shop[s].customeEachHour[u];
+  //     }
+  //     dailyTotal=dailyTotal+sum;
+  //     tdFooter.textContent=sum;
+  //     lastRo.appendChild(tdFooter);
+  //   }
+  //   let ceilTotal=document.createElement('td');
+  //   ceilTotal.textContent=dailyTotal;
 
 
 
 
-  }
+  // }
 
 };
 
