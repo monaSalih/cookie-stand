@@ -1,23 +1,66 @@
 *{
     box-sizing: border-box;
 }
+body{
+    background-color: #FFEBBB;
+    font-size:18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     width: 95%;
+   /* height: 100%; */
+    
+}
 
+header{
+    border-bottom:5px dotted #814906;
+    
+    
+}
+header img{
+    margin-right: 666px;
 
-
+}
+ h1{
+    text-align: center;
+}
 .picPar{
 
 margin: 20px auto;
 display: flex;
 flex-direction: column;
 align-items: center;
-
+width: fit-content;
+background-color: #BAD8B6;
+border: 5px double #01352C;
 
 }
 img{
     width: 200px;
     height: 100px;
 }
+.cookLis{
+    border:3px double #1768AC;
+    margin-left: 25%;
 
-footer{
+}
+
+footer {
     background-color: wheat;
+    
+    text-align: center;
+}
+
+.conDiv{
+    border-bottom: 4px double #18134C;
+    width: fit-content;
+    
+}
+.conDiv p{
+
+    text-align: center;
+    margin-right: 768px;
+}
+.lasFoo{
+width: 400px;
+height: 100px;
+
 }

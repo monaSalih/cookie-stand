@@ -121,30 +121,36 @@ NewCons.prototype.render=function(){
   dataRow.appendChild(tdtotal) ;
   tdtotal.textContent=this.totalCoun;
 
-  // function FooterCalc(){
-  //   let lastRo=document.createElement('tfoot');
-  //   let tdFoot=document.createElement('td');
-  //   tdFoot.textContent='Totals';
-  //   lastRo.appendChild(tdFoot);
-  //   tabCo.appendChild(tdFoot);
-  //   let dailyTotal=0;
-  //   for (let u = 0; u < time.length; u++) {
-  //     let tdFooter=document.createElement('td');
-  //     let sum=0;
-  //     for(let s=0; s<shop.length;s++)
-  //     {sum=sum+shop[s].customeEachHour[u];
-  //     }
-  //     dailyTotal=dailyTotal+sum;
-  //     tdFooter.textContent=sum;
-  //     lastRo.appendChild(tdFooter);
-  //   }
-  //   let ceilTotal=document.createElement('td');
-  //   ceilTotal.textContent=dailyTotal;
 
 
+};//////////creatFooter\\
+
+NewCons.prototype. footRow=function(){
+  let tableFoot=document.createElement('tfoot');
+  let tdFo=document.createElement('td');
+  tdFo.textContent='total';
+  tableFoot.appendChild(tdFo);
+  tabCo.appendChild(tableFoot);
+
+  let lastTotal=0;
+  let sum=0;
+  for(let i=0; i<=time.length;i++){
+    let tdCountTotal=document.createElement('td');
+    for(let r=0;r<=shop.length;r++){
+      sum=sum+shop[r].cookiesNum[i];
+      console.log(this.cookiesNum);
+      //console.log(this.cookiesNum);
+
+    }
+    tdCountTotal.textContent=sum;
+    tableFoot.appendChild(tdCountTotal);
 
 
-  // }
+  }
+  let totalCeil=document.createElement('td');
+
+  lastTotal=lastTotal+sum;
+  totalCeil.textContent=lastTotal;
 
 };
 
@@ -162,5 +168,31 @@ paris.render();
 
 // lima.headRender();
 lima.render();
-
+seattle.footRow();
 // FooterCalc();
+
+
+// function FooterCalc(){
+//   let lastRo=document.createElement('tfoot');
+//   let tdFoot=document.createElement('td');
+//   tdFoot.textContent='Totals';
+//   lastRo.appendChild(tdFoot);
+//   tabCo.appendChild(tdFoot);
+//   let dailyTotal=0;
+//   for (let u = 0; u < time.length; u++) {
+//     let tdFooter=document.createElement('td');
+//     let sum=0;
+//     for(let s=0; s<shop.length;s++)
+//     {sum=sum+shop[s].customeEachHour[u];
+//     }
+//     dailyTotal=dailyTotal+sum;
+//     tdFooter.textContent=sum;
+//     lastRo.appendChild(tdFooter);
+//   }
+//   let ceilTotal=document.createElement('td');
+//   ceilTotal.textContent=dailyTotal;
+
+
+
+
+// }
