@@ -102,6 +102,7 @@ NewCons.prototype.headRender=function(){
 
 };//
 //////////////////table
+let totalRow=1;
 NewCons.prototype.render=function(){
   let dataRow=document.createElement('tr');
   tabCo.appendChild(dataRow);
@@ -114,7 +115,7 @@ NewCons.prototype.render=function(){
     let tdCont=document.createElement('td');
     dataRow.appendChild(tdCont) ;
     tdCont.textContent=this.cookiesNum[i];
-
+    totalRow+=totalRow+1;
 
   }
   let tdtotal=document.createElement('td');
@@ -124,38 +125,92 @@ NewCons.prototype.render=function(){
 
 
 };//////////creatFooter\\
-
-NewCons.prototype. footRow=function(){
-  let tableFoot=document.createElement('tfoot');
+let tableFoot;
+function footerRow(){
+  tableFoot=document.createElement('tfoot');
   let tdFo=document.createElement('td');
   tdFo.textContent='total';
   tableFoot.appendChild(tdFo);
   tabCo.appendChild(tableFoot);
 
-  let lastTotal=0;
-  let sum=0;
-  for(let i=0; i<=time.length;i++){
-    let tdCountTotal=document.createElement('td');
-    for(let r=0;r<=shop.length;r++){
-      sum=sum+shop[r].cookiesNum[i];
-      console.log(this.cookiesNum);
-      //console.log(this.cookiesNum);
 
+  let lastTotal=0;
+
+  console.log(shop);
+
+  for(let i=0; i<time.length;i++){
+    let tdCountTotal=document.createElement('td');
+    let sum=0;
+    for(let r=0;r<shop.length;r++){
+      // console.log(shop[r]);
+      sum=sum+shop[r].cookiesNum[i];
+      console.log('iord',shop[r].cookiesNum[i]);
+      lastTotal+=sum;
+      //console.log(this.cookiesNum);
+      // lastTotal=this.totalCoun+sum;
     }
+    console.log(sum,'sumation');
     tdCountTotal.textContent=sum;
     tableFoot.appendChild(tdCountTotal);
 
-
   }
+  // let newSum=0;
+  // for (let j = 0; j < shop.length; j++) {
+
+  //   newSum=newSum+shop[j].totalCoun;
+  // }
   let totalCeil=document.createElement('td');
-
-  lastTotal=lastTotal+sum;
   totalCeil.textContent=lastTotal;
+  tableFoot.appendChild(totalCeil);
+  // tdCountTotal.textContent=newSum;
+  // let tdCountTotalceil=document.createElement('td');
+  // tableFoot.appendChild(tdCountTotalceil);
+  // tdCountTotalceil.textContent=newSum;
 
-};
+
+}
+let formBra=document.getElementById('branch');
+console.log(formBra);
+formBra.addEventListener('submit',addStore);
+
+function addStore(event){
+
+  event.preventDefault();
+  // console.log('StorNam');
+  let StorNam=event.target.sInfo.value;
+  let minNum=event.target.minStore.value;
+  let maxNum=event.target.maxStore.value;
+  let cookNum=event.target.cocStore.value;
+
+
+  let branchStore=new NewCons(StorNam,minNum,maxNum,cookNum);
+  branchStore.customerPerHour();
+  branchStore.cookiesAvr();
+  branchStore.render();
+
+
+  tableFoot.innerHTML='';
+  footerRow();
+
+
+  // let documentStories = formBra.activeDocument.stories.everyItem();
+
+  // let allTables = documentStories.tables.everyItem().getElements();
+
+  // for(let t=0; t<allTables.length; t++){
+
+  //   let lastRow = allTables.rows[-1];
+
+  // }
+
+  // footerRow();
+
+
+
+}
 
 seattle.headRender();
-seattle.render();
+// seattle.render();
 
 // tokyo.headRender();
 tokyo.render();
@@ -168,8 +223,29 @@ paris.render();
 
 // lima.headRender();
 lima.render();
-seattle.footRow();
+
+
+////////////////////////footer
+footerRow();
 // FooterCalc();
+// addStore()
+// footerRow();
+
+
+////////formSide
+// let storForm=document.getElementById('branch');
+// storForm.addEventListener('submit',addStore);
+
+
+
+
+
+
+
+
+
+
+
 
 
 // function FooterCalc(){
